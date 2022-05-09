@@ -28,6 +28,8 @@ def match_all(path):
         if file.endswith(".txt"):
             lines = read_text_file(path + "/" + file)
             mydict = match_object(lines, mydict)
-    print(mydict)
+    return mydict
 
-match_all("C:/Users/Muhammad Waleed/Downloads/fyp_smart")
+# Add the path
+path = ""
+print(match_all(path))
