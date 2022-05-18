@@ -28,13 +28,16 @@ Before you can start installing or using packages in your virtual environment yo
 
 <h3> Installing Required Modules for Yolov5 v4 </h3>
 This will guide you how to install all the required modules especially for yolov5 version 4.
-
-Clone the yolov5 v4 repository.
-Note: Make sure you have git installed.
-
+ 
+Go to Yolov5-4.0 github repo and download the repository in zip formant. After that, Extract the zip in your working directory
 ```
-git clone https://github.com/ultralytics/yolov5.git
-cd yolov5
+https://github.com/ultralytics/yolov5/tree/v4.0
+```
+
+Move to your yolov5 directory.
+  
+```
+cd yolov5-4.0
 ```
 
 install the required modules for yolov5 v4. This will install all the required modules.
