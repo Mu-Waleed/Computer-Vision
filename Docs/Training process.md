@@ -44,8 +44,7 @@ dataset/labels/im0.txt  # label
 ```
 
 <h3> Select a Model </h3>
-Select a pretrained model to start training from.
-![alt text](https://github.com/ultralytics/yolov5/releases/download/v1.0/model_comparison.png)
+Select a pretrained model to start training from. Larger models like YOLOv5x and YOLOv5x6 will produce better results in nearly all cases, but have more parameters, require more CUDA memory to train, and are slower to run. For mobile deployments we recommend YOLOv5s/m, for cloud deployments we recommend YOLOv5l/x. See our README table for a full comparison of all models.
 <h3> Train </h3>
 
 Train a YOLOv5s model on your dataset by specifying dataset, batch-size, image size and either pretrained --weights yolov5s.pt (recommended), or randomly initialized --weights '' --cfg yolov5s.yaml (not recommended). Pretrained weights are auto-downloaded from the latest YOLOv5 release.
