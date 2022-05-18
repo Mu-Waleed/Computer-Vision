@@ -7,7 +7,7 @@ Go and read the Setting up [Environment.md](https://github.com/Mu-Waleed/Compute
 
 <h2> Train On Custom Data </h2>
 
-<h3> 1. Create dataset.yaml </h3>
+<h3> Create dataset.yaml </h3>
 
 dataset.yaml, shown below, is the dataset configuration file that you should create (if not present) according to your dataset in your yolov5 directory that defines 1) an optional download command/URL for auto-downloading, 2) a path to a directory of training images (or path to a *.txt file with a list of training images), 3) the same for our validation images, 4) the number of classes, 5) a list of class names:
 train represents the training images path.
