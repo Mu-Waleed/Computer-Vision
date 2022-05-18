@@ -2,11 +2,8 @@
   
 This will guide you how to train the model using yolov5 especially version 4.
  
-Go and read the Setting up Environment.md in order to set up the environment, add yolov5 repository and install requirements .
+Go and read the Setting up [Environment.md](https://github.com/Mu-Waleed/Computer-Vision/blob/main/Docs/Setting%20up%20Environment.md) in order to set up the environment, add yolov5 repository and install requirements .
 
-```
-https://github.com/Mu-Waleed/Computer-Vision/blob/main/Docs/Setting%20up%20Environment.md
-```
 
 <h2> Train On Custom Data </h2>
 
@@ -49,17 +46,17 @@ Select a pretrained model to start training from. Larger models like YOLOv5x and
 
 Train a YOLOv5s model on your dataset by specifying dataset, batch-size, image size and either pretrained --weights yolov5s.pt (recommended), or randomly initialized --weights '' --cfg yolov5s.yaml (not recommended). Pretrained weights are auto-downloaded from the latest YOLOv5 release.
 
-Note: If do not want to do mulit-class training you can simply add --single-cls parameter below too for force single class training.
-
+**Note:** If do not want to do mulit-class training you can simply add --single-cls parameter below too for force single class training.
+**Note:** You can use any pretrained weight according to your need.
 ```
 $ python train.py --img 640 --batch 16 --epochs 5 --data dataset.yaml --weights yolov5s.pt
 ```
 
 <h3> More about parameters </h3>
 
-**Epochs.** Start with 300 epochs. If this overfits early then you can reduce epochs. If overfitting does not occur after 300 epochs, train longer, i.e. 600, 1200 etc epochs.</br></br>
-**Image size.** COCO trains at native resolution of --img 640, though due to the high amount of small objects in the dataset it can benefit from training at higher resolutions such as --img 1280. If there are many small objects then custom datasets will benefit from training at native or higher resolution. Best inference results are obtained at the same --img as the training was run at, i.e. if you train at --img 1280 you should also test and detect at --img 1280.</br></br>
-**Batch size.** Use the largest --batch-size that your hardware allows for. Small batch sizes produce poor batchnorm statistics and should be avoided.</br>
+**Epochs.** It represents the number of epochs. Start with 300 epochs. If this overfits early then you can reduce epochs. If overfitting does not occur after 300 epochs, train longer, i.e. 600, 1200 etc epochs.</br></br>
+**Image size.** It represents resolution of image. COCO trains at native resolution of --img 640, though due to the high amount of small objects in the dataset it can benefit from training at higher resolutions such as --img 1280. If there are many small objects then custom datasets will benefit from training at native or higher resolution. Best inference results are obtained at the same --img as the training was run at, i.e. if you train at --img 1280 you should also test and detect at --img 1280.</br></br>
+**Batch size.** It represenst the number of epochs. Use the largest --batch-size that your hardware allows for. Small batch sizes produce poor batchnorm statistics and should be avoided.</br>
 
 <h3> Local Logging </h3>
 
