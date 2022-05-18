@@ -37,7 +37,7 @@ git clone https://github.com/ultralytics/yolov5.git
 cd yolov5
 ```
 
-install the required modules for yolov5 v4
+install the required modules for yolov5 v4. This will install all the required modules.
 
 ```
 pip install -r requirements.txt
