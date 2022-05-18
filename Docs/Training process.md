@@ -36,7 +36,7 @@ names: ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 't
         'teddy bear', 'hair drier', 'toothbrush']
 ```
 
-Note: Your train/val images labels should be in separated folder named labels along with images folder.
+**Note:** Your train/val images labels should be in separated folder named labels along with images folder.
 YOLOv5 locates labels automatically for each image by replacing the last instance of /images/ in each image path with /labels/. For example:
 ```
 dataset/images/im0.jpg  # image
@@ -55,6 +55,12 @@ Note: If do not want to do mulit-class training you can simply add --single-cls 
 ```
 $ python train.py --img 640 --batch 16 --epochs 5 --data dataset.yaml --weights yolov5s.pt
 ```
+
+<h3> More about parameters </h3>
+
+**Epochs.** Start with 300 epochs. If this overfits early then you can reduce epochs. If overfitting does not occur after 300 epochs, train longer, i.e. 600, 1200 etc epochs.</br></br>
+**Image size.** COCO trains at native resolution of --img 640, though due to the high amount of small objects in the dataset it can benefit from training at higher resolutions such as --img 1280. If there are many small objects then custom datasets will benefit from training at native or higher resolution. Best inference results are obtained at the same --img as the training was run at, i.e. if you train at --img 1280 you should also test and detect at --img 1280.</br></br>
+**Batch size.** Use the largest --batch-size that your hardware allows for. Small batch sizes produce poor batchnorm statistics and should be avoided.</br>
 
 <h3> Local Logging </h3>
 
